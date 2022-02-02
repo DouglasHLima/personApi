@@ -3,12 +3,14 @@ package com.doughlima.personapi.service;
 import com.doughlima.personapi.dto.request.PersonDTO;
 import com.doughlima.personapi.dto.response.MessageResponseDTO;
 import com.doughlima.personapi.entity.Person;
+import com.doughlima.personapi.exception.PersonNotFoundException;
 import com.doughlima.personapi.mapper.PersonMapper;
 import com.doughlima.personapi.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 
@@ -38,5 +40,11 @@ public class PersonService {
         return allPeople.stream()
                 .map(personMapper::toDTO)
                 .collect(Collectors.toList());
+    }
+
+    public PersonDTO findById(Long id) throws PersonNotFoundException {
+        Person person = personRepository.findById(id)
+                .orElseThrow(() -> new PersonNotFoundException(id));
+        return personMapper.toDTO(person);
     }
 }

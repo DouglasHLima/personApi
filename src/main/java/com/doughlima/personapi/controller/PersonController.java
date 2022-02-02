@@ -3,6 +3,7 @@ package com.doughlima.personapi.controller;
 
 import com.doughlima.personapi.dto.request.PersonDTO;
 import com.doughlima.personapi.dto.response.MessageResponseDTO;
+import com.doughlima.personapi.exception.PersonNotFoundException;
 import com.doughlima.personapi.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ import java.util.List;
 public class PersonController {
 
     private final PersonService personService;
+
 
     @Autowired
     public PersonController(PersonService personService) {
@@ -31,5 +33,10 @@ public class PersonController {
     @GetMapping
     public List<PersonDTO> listAll(){
         return personService.listAll();
+    }
+
+    @GetMapping("/{id}")
+    public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException {
+        return personService.findById(id);
     }
 }
