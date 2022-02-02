@@ -29,11 +29,11 @@ link do [Heroku](https://doughlima-peopleapi.herokuapp.com/api/v1/people):
 https://doughlima-peopleapi.herokuapp.com/api/v1/people
 ```
 
-###[*Utilize o POSTMAN para testar*](https://www.postman.com/)
+### [*Utilize o POSTMAN para testar*](https://www.postman.com/)
 
 método POST 
 
-*(obs: campo CPF necessita de um CPF válido)*
+(obs: campo CPF necessita de um CPF válido)*
 
 ```json lines
 {
@@ -80,7 +80,7 @@ https://doughlima-peopleapi.herokuapp.com/api/v1/people/1
 método UPDATE by ID:
 
 ```json lines
-// https://doughlima-peopleapi.herokuapp.com/api/v1/people/1
+//https://doughlima-peopleapi.herokuapp.com/api/v1/people/1
 {
 "id":1,
 "firstName": "Doug",
@@ -105,7 +105,7 @@ https://doughlima-peopleapi.herokuapp.com/api/v1/people/1
 ```
 
 
-##LINKS ÚTEIS
+## LINKS ÚTEIS
 * [Site oficial do Spring](https://spring.io/)
 * [Site oficial do Spring Initialzr, para setup do projeto](https://start.spring.io/)
 * [Site oficial do Heroku](https://www.heroku.com/)
@@ -113,7 +113,7 @@ https://doughlima-peopleapi.herokuapp.com/api/v1/people/1
 * [Documentação oficial do Map Struct](https://mapstruct.org/)
 * [Referência para o padrão arquitetural REST](https://restfulapi.net/)
 
-##[Meu linkedin](https://www.linkedin.com/in/douglas-lima-b980441a8/)
+## [Meu linkedin](https://www.linkedin.com/in/douglas-lima-b980441a8/)
 
 
 
